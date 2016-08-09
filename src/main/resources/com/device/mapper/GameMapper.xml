@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.device.mapper.GameMapper">
+	<resultMap id="BaseResultMap" type="com.device.model.Game">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="game_code" property="gameCode" jdbcType="VARCHAR" />
+		<result column="game_name" property="gameName" jdbcType="VARCHAR" />
+		<result column="game_version" property="gameVersion" jdbcType="VARCHAR" />
+		<result column="game_process" property="gameProcess" jdbcType="VARCHAR" />
+		<result column="state" property="state" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, game_code, game_name, game_version, game_process,
+		state, create_time
+	</sql>
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from game
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+	<select id="getAllGames" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from game
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from game
+		where id = #{id,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="com.device.model.Game">
+		insert into game (id,
+		game_code, game_name,
+		game_version, game_process, state,
+		create_time)
+		values (#{id,jdbcType=INTEGER}, #{gameCode,jdbcType=VARCHAR},
+		#{gameName,jdbcType=VARCHAR},
+		#{gameVersion,jdbcType=VARCHAR},
+		#{gameProcess,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR},
+		#{createTime,jdbcType=TIMESTAMP})
+	</insert>
+	<insert id="insertSelective" parameterType="com.device.model.Game">
+		insert into game
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="gameCode != null">
+				game_code,
+			</if>
+			<if test="gameName != null">
+				game_name,
+			</if>
+			<if test="gameVersion != null">
+				game_version,
+			</if>
+			<if test="gameProcess != null">
+				game_process,
+			</if>
+			<if test="state != null">
+				state,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="gameCode != null">
+				#{gameCode,jdbcType=VARCHAR},
+			</if>
+			<if test="gameName != null">
+				#{gameName,jdbcType=VARCHAR},
+			</if>
+			<if test="gameVersion != null">
+				#{gameVersion,jdbcType=VARCHAR},
+			</if>
+			<if test="gameProcess != null">
+				#{gameProcess,jdbcType=VARCHAR},
+			</if>
+			<if test="state != null">
+				#{state,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				#{createTime,jdbcType=TIMESTAMP},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.device.model.Game">
+		update game
+		<set>
+			<if test="gameCode != null">
+				game_code = #{gameCode,jdbcType=VARCHAR},
+			</if>
+			<if test="gameName != null">
+				game_name = #{gameName,jdbcType=VARCHAR},
+			</if>
+			<if test="gameVersion != null">
+				game_version = #{gameVersion,jdbcType=VARCHAR},
+			</if>
+			<if test="gameProcess != null">
+				game_process = #{gameProcess,jdbcType=VARCHAR},
+			</if>
+			<if test="state != null">
+				state = #{state,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime,jdbcType=TIMESTAMP},
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.device.model.Game">
+		update game
+		set
+		game_code = #{gameCode,jdbcType=VARCHAR},
+		game_name =
+		#{gameName,jdbcType=VARCHAR},
+		game_version =
+		#{gameVersion,jdbcType=VARCHAR},
+		game_process =
+		#{gameProcess,jdbcType=VARCHAR},
+		state = #{state,jdbcType=VARCHAR},
+		create_time = #{createTime,jdbcType=TIMESTAMP}
+		where id =
+		#{id,jdbcType=INTEGER}
+	</update>
+</mapper>
