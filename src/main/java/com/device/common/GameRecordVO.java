@@ -8,6 +8,7 @@ public class GameRecordVO {
 	private Integer runCount;
 	private Date createTime;
 	private String processName;
+	private String gameName;
 
 	public String getGameCode()
 	{
@@ -73,4 +74,14 @@ public class GameRecordVO {
 	{
 		super();
 	}
+
+	public String getGameName() {
+		return gameName;
+	}
+
+	public void setGameName(String gameName) {
+		this.gameName = gameName;
+	}
+	
+	
 }

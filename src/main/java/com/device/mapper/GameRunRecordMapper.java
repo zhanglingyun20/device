@@ -18,6 +18,7 @@ public interface GameRunRecordMapper {
 
 	int updateByPrimaryKey(GameRunRecord record);
 	
-	
 	List<GameRunRecord> findByNoSync();
+	
+	void batchDeleteHistory(List<GameRunRecord> gameRunRecords);
 }

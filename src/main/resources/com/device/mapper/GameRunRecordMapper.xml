@@ -5,12 +5,13 @@
 		<id column="id" property="id" jdbcType="INTEGER" />
 		<result column="game_id" property="gameId" jdbcType="INTEGER" />
 		<result column="game_code" property="gameCode" jdbcType="VARCHAR" />
-		<result column="run_time" property="runTime" jdbcType="DOUBLE" />
+		<result column="run_count" property="runCount" jdbcType="INTEGER" />
 		<result column="is_sync" property="isSync" jdbcType="VARCHAR" />
+		<result column="game_process" property="gameProcess" jdbcType="VARCHAR" />
 		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
 	</resultMap>
 	<sql id="Base_Column_List">
-		id, game_id, game_code, run_time, is_sync, create_time
+		id, game_id, game_code, run_count, is_sync, game_process,create_time
 	</sql>
 	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
 		parameterType="java.lang.Integer">
@@ -35,11 +36,11 @@
 	</delete>
 	<insert id="insert" parameterType="com.device.model.GameRunRecord">
 		insert into game_run_record (id, game_id, game_code,
-		run_time, is_sync, create_time
+		run_count, is_sync, game_process,create_time
 		)
 		values (#{id,jdbcType=INTEGER}, #{gameId,jdbcType=INTEGER},
 		#{gameCode,jdbcType=VARCHAR},
-		#{runTime,jdbcType=DOUBLE}, #{isSync,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}
+		#{runCount,jdbcType=INTEGER}, #{isSync,jdbcType=VARCHAR},  #{gameProcess,jdbcType=VARCHAR},#{createTime,jdbcType=TIMESTAMP}
 		)
 	</insert>
 	<insert id="insertSelective" parameterType="com.device.model.GameRunRecord">
@@ -54,11 +55,14 @@
 			<if test="gameCode != null">
 				game_code,
 			</if>
-			<if test="runTime != null">
-				run_time,
+			<if test="runCount != null">
+				run_count,
 			</if>
 			<if test="isSync != null">
 				is_sync,
+			</if>
+			<if test="gameProcess != null">
+				game_process,
 			</if>
 			<if test="createTime != null">
 				create_time,
@@ -74,11 +78,14 @@
 			<if test="gameCode != null">
 				#{gameCode,jdbcType=VARCHAR},
 			</if>
-			<if test="runTime != null">
-				#{runTime,jdbcType=DOUBLE},
+			<if test="runCount != null">
+				#{runCount,jdbcType=INTEGER},
 			</if>
 			<if test="isSync != null">
 				#{isSync,jdbcType=VARCHAR},
+			</if>
+			<if test="gameProcess != null">
+				#{gameProcess,jdbcType=VARCHAR},
 			</if>
 			<if test="createTime != null">
 				#{createTime,jdbcType=TIMESTAMP},
@@ -94,12 +101,16 @@
 			<if test="gameCode != null">
 				game_code = #{gameCode,jdbcType=VARCHAR},
 			</if>
-			<if test="runTime != null">
-				run_time = #{runTime,jdbcType=DOUBLE},
+			<if test="runCount != null">
+				run_count = #{runCount,jdbcType=INTEGER},
 			</if>
 			<if test="isSync != null">
 				is_sync = #{isSync,jdbcType=VARCHAR},
 			</if>
+			<if test="gameProcess != null">
+				game_process = #{gameProcess,jdbcType=VARCHAR},
+			</if>
+			
 			<if test="createTime != null">
 				create_time = #{createTime,jdbcType=TIMESTAMP},
 			</if>
@@ -110,9 +121,20 @@
 		update game_run_record
 		set game_id = #{gameId,jdbcType=INTEGER},
 		game_code = #{gameCode,jdbcType=VARCHAR},
-		run_time = #{runTime,jdbcType=DOUBLE},
+		run_count = #{runCount,jdbcType=INTEGER},
 		is_sync = #{isSync,jdbcType=VARCHAR},
+		game_process = #{gameProcess,jdbcType=VARCHAR},
 		create_time = #{createTime,jdbcType=TIMESTAMP}
 		where id = #{id,jdbcType=INTEGER}
 	</update>
+
+
+
+	<delete id="batchDeleteHistory" parameterType="List">
+		DELETE FROM game_run_record where id in
+		<foreach item="item" collection="list" open="(" separator=","
+			close=")">
+			#{item.id}
+		</foreach>
+	</delete>
 </mapper>

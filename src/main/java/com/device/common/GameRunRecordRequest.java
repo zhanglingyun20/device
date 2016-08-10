@@ -1,7 +1,11 @@
 package com.device.common;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import com.device.model.DeviceInfo;
+import com.device.model.GameRunRecord;
 
 /**
  * 
@@ -110,5 +114,29 @@ public class GameRunRecordRequest {
 	public GameRunRecordRequest()
 	{
 		super();
+	}
+	
+	public GameRunRecordRequest(DeviceInfo deviceInfo,List<GameRunRecord> gameRecords){
+		if (deviceInfo!=null)
+		{
+			setAccount(deviceInfo.getAccount());
+			setDeviceMac(deviceInfo.getDeviceMac());
+			setDeviceName(deviceInfo.getDeviceName());
+			setUploadTime(new Date());
+			List<GameRecordVO> bulidRecord=new ArrayList<GameRecordVO>();
+			if (gameRecords!=null&&!gameRecords.isEmpty())
+			{
+				for (GameRunRecord gameRunRecord : gameRecords)
+				{
+					GameRecordVO vo =new GameRecordVO();
+					vo.setCreateTime(gameRunRecord.getCreateTime());
+					vo.setGameCode(gameRunRecord.getGameCode());
+					vo.setRunCount(1);
+					vo.setProcessName(gameRunRecord.getGameProcess());
+					bulidRecord.add(vo);
+				}
+				setRecord(bulidRecord);
+			}
+		}
 	}
 }

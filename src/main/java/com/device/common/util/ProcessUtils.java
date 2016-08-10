@@ -1,4 +1,4 @@
-package com.device.common;
+package com.device.common.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;

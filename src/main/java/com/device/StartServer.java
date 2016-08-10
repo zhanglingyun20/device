@@ -7,7 +7,8 @@ import java.util.concurrent.LinkedBlockingDeque;
 
 import org.apache.log4j.Logger;
 
-import com.device.common.ProcessUtils;
+import com.device.common.SystemCache;
+import com.device.common.util.ProcessUtils;
 import com.device.service.MonitorService;
 /**
  * 
@@ -24,8 +25,10 @@ public class StartServer {
 	
 	public static void start() {
 		logger.info("server start...");
-		scanProcess();
-		processConsumer();
+		if (SystemCache.initCache()) {
+			scanProcess();
+			processConsumer();
+		}
 	}
 
 	/**

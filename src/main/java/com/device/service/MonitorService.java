@@ -38,11 +38,10 @@ public class MonitorService {
 	 */
 	public List<Game> getMonitorGames()
 	{
-		return SystemCache.getMonitorGames();
+		return SystemCache.getChacheByClass(Game.class);
 	}
 	
 	public void handleProcess(Set<String> processList){
-		logger.info(processList);
 		List<String> offGames = findOffGame(toLowerCase(processList));
 		if (offGames!=null&&!offGames.isEmpty()) 
 		{
@@ -53,7 +52,7 @@ public class MonitorService {
 				{
 					gameId = game.getId();
 				}
-				GameRunRecord record = new GameRunRecord(null, gameId, processName, 5d, GameRunRecord.Sync.NO.getValue(), new Date());
+				GameRunRecord record = new GameRunRecord(null, gameId, game.getGameCode(),processName, 1, GameRunRecord.Sync.NO.getValue(), new Date());
 				gameRunRecordMapper.insertSelective(record);
 			}
 		}
@@ -121,7 +120,7 @@ public class MonitorService {
 								monitorCache.put(processName, MonitorCache.OPEN);
 								logger.info("========进程"+processName +"开启===========");
 							}else if(MonitorCache.OPEN.equals(processState)){
-								logger.info("========进程"+processName +"正在跑===========");
+								logger.debug("========进程"+processName +"正在跑===========");
 							}
 						}
 					}

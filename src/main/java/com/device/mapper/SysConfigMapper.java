@@ -1,5 +1,7 @@
 package com.device.mapper;
 
+import java.util.List;
+
 import com.device.model.SysConfig;
 
 public interface SysConfigMapper {
@@ -15,4 +17,6 @@ public interface SysConfigMapper {
 	int updateByPrimaryKeySelective(SysConfig record);
 
 	int updateByPrimaryKey(SysConfig record);
+	
+	List<SysConfig> getAllConfig();
 }

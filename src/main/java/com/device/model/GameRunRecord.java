@@ -17,11 +17,12 @@ public class GameRunRecord {
      * 游戏编码
      */
     private String gameCode;
+    private String gameProcess;
 
     /**
      * 运行时长(单位：分钟)
      */
-    private Double runTime;
+    private Integer runCount;
 
     /**
      * 是否已经同步到服务端 
@@ -57,15 +58,17 @@ public class GameRunRecord {
         this.gameCode = gameCode;
     }
 
-    public Double getRunTime() {
-        return runTime;
-    }
 
-    public void setRunTime(Double runTime) {
-        this.runTime = runTime;
-    }
 
-    public String getIsSync() {
+    public Integer getRunCount() {
+		return runCount;
+	}
+
+	public void setRunCount(Integer runCount) {
+		this.runCount = runCount;
+	}
+
+	public String getIsSync() {
         return isSync;
     }
 
@@ -81,16 +84,25 @@ public class GameRunRecord {
         this.createTime = createTime;
     }
 
+
+
 	public GameRunRecord(Integer id, Integer gameId, String gameCode,
-			Double runTime, String isSync, Date createTime) {
+			String gameProcess, Integer runCount, String isSync, Date createTime) {
 		super();
 		this.id = id;
 		this.gameId = gameId;
 		this.gameCode = gameCode;
-		this.runTime = runTime;
+		this.gameProcess = gameProcess;
+		this.runCount = runCount;
 		this.isSync = isSync;
 		this.createTime = createTime;
 	}
+
+
+
+
+
+
 
 	public enum Sync {
 		YES("yes"), 
@@ -109,6 +121,14 @@ public class GameRunRecord {
 
 	}
 	
+	public String getGameProcess() {
+		return gameProcess;
+	}
+
+	public void setGameProcess(String gameProcess) {
+		this.gameProcess = gameProcess;
+	}
+
 	public GameRunRecord() {
 		super();
 	}

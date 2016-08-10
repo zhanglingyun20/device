@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2016-08-10 01:01:10
+Date: 2016-08-11 01:00:47
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,11 +34,12 @@ CREATE TABLE `device_info` (
   `is_sync` varchar(10) DEFAULT NULL COMMENT '是否已经同步到服务端',
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='设备信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='设备信息表';
 
 -- ----------------------------
 -- Records of device_info
 -- ----------------------------
+INSERT INTO `device_info` VALUES ('1', 'zly@163.com', 'sawyer', '123456', '00000000000000000', 'NO.1', '深圳', 'sawyer的场地', null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for game
@@ -58,9 +59,9 @@ CREATE TABLE `game` (
 -- ----------------------------
 -- Records of game
 -- ----------------------------
-INSERT INTO `game` VALUES ('1', 'QQ123', 'qq游戏', '1.0', 'QQ.EXE', '0', '2016-08-09 21:52:31');
-INSERT INTO `game` VALUES ('2', 'eclipse', 'eclipse', '1.0', 'eclipse.exe', '0', '2016-08-09 21:53:19');
-INSERT INTO `game` VALUES ('3', 'chrome.exe', 'chrome', '1.0', 'chrome.exe', '0', '2016-08-10 00:55:28');
+INSERT INTO `game` VALUES ('1', 'qq', 'qq游戏', '1.0', 'qq.exe', 'active', '2016-08-09 21:52:31');
+INSERT INTO `game` VALUES ('2', 'eclipse', 'eclipse', '1.0', 'eclipse.exe', 'active', '2016-08-09 21:53:19');
+INSERT INTO `game` VALUES ('3', 'chrome', 'chrome', '1.0', 'chrome.exe', 'active', '2016-08-10 00:55:28');
 
 -- ----------------------------
 -- Table structure for game_monitor
@@ -85,11 +86,12 @@ CREATE TABLE `game_run_record` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `game_id` int(11) NOT NULL COMMENT '游戏id',
   `game_code` varchar(50) DEFAULT NULL COMMENT '游戏编码',
-  `run_time` double(11,0) NOT NULL COMMENT '运行时长(单位：分钟)',
+  `run_count` int(11) NOT NULL COMMENT '运行次数',
   `is_sync` varchar(10) DEFAULT NULL COMMENT '是否已经同步到服务端',
+  `game_process` varchar(50) DEFAULT NULL,
   `create_time` datetime NOT NULL COMMENT '创建日期',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='游戏运行记录表';
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='游戏运行记录表';
 
 -- ----------------------------
 -- Records of game_run_record
@@ -107,8 +109,12 @@ CREATE TABLE `sys_config` (
   `is_valid` varchar(10) DEFAULT NULL COMMENT '是否有效',
   `create_time` datetime NOT NULL COMMENT '创建日期',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统配置表';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='系统配置表';
 
 -- ----------------------------
 -- Records of sys_config
 -- ----------------------------
+INSERT INTO `sys_config` VALUES ('1', 'server_domain', 'http://localhost:8080/management', null, null, '2016-08-10 23:26:19');
+INSERT INTO `sys_config` VALUES ('2', 'sync_game_record', '/sync/game_run_record', null, null, '2016-08-10 23:26:42');
+INSERT INTO `sys_config` VALUES ('3', 'game_pull', '/sync/get_games', null, null, '2016-08-10 23:36:45');
+INSERT INTO `sys_config` VALUES ('4', 'active_user', '/sync/active_account', null, null, '2016-08-10 23:37:31');
