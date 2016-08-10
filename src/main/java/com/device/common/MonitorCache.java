@@ -16,11 +16,6 @@ public class MonitorCache {
 	public static final String OPEN = "open";
 	
 	/**
-	 * 游戏正在运行中
-	 */
-	public static final String RUNNING = "running";
-	
-	/**
 	 * 游戏关闭
 	 */
 	public static final String OFF = "off";

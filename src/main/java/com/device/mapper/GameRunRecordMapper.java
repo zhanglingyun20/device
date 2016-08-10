@@ -1,5 +1,7 @@
 package com.device.mapper;
 
+import java.util.List;
+
 import com.device.model.GameRunRecord;
 
 public interface GameRunRecordMapper {
@@ -15,4 +17,7 @@ public interface GameRunRecordMapper {
 	int updateByPrimaryKeySelective(GameRunRecord record);
 
 	int updateByPrimaryKey(GameRunRecord record);
+	
+	
+	List<GameRunRecord> findByNoSync();
 }

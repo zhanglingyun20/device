@@ -21,6 +21,15 @@
 		from game
 		where id = #{id,jdbcType=INTEGER}
 	</select>
+	
+	<select id="findByProcessName" resultMap="BaseResultMap"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from game
+		where game_process = #{processName}
+	</select>
+	
 	<select id="getAllGames" resultMap="BaseResultMap">
 		select
 		<include refid="Base_Column_List" />
