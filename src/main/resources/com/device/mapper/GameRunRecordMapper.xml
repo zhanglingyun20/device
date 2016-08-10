@@ -19,6 +19,16 @@
 		from game_run_record
 		where id = #{id,jdbcType=INTEGER}
 	</select>
+	
+	
+	<select id="findByNoSync" resultMap="BaseResultMap" >
+		select
+		<include refid="Base_Column_List" />
+		from game_run_record
+		where is_sync = "no"
+	</select>
+	
+	
 	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
 		delete from game_run_record
 		where id = #{id,jdbcType=INTEGER}

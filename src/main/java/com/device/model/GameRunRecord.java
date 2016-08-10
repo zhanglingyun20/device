@@ -24,7 +24,7 @@ public class GameRunRecord {
     private Double runTime;
 
     /**
-     * 是否已经同步到服务端
+     * 是否已经同步到服务端 
      */
     private String isSync;
 
@@ -92,6 +92,23 @@ public class GameRunRecord {
 		this.createTime = createTime;
 	}
 
+	public enum Sync {
+		YES("yes"), 
+		NO("no");
+		private final String value;
+
+		Sync(String value)
+		{
+			this.value = value;
+		}
+
+		public String getValue()
+		{
+			return value;
+		}
+
+	}
+	
 	public GameRunRecord() {
 		super();
 	}
