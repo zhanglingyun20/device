@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.device.common.GameRunRecordRequest;
 import com.device.common.Result;
@@ -18,6 +19,7 @@ import com.device.common.util.HttpRequest;
 import com.device.common.util.MD5Util;
 import com.device.mapper.GameRunRecordMapper;
 import com.device.model.DeviceInfo;
+import com.device.model.Game;
 import com.device.model.GameRunRecord;
 
 @Service
@@ -61,6 +63,33 @@ public class SyncDataService
 		{
 			logger.debug("上传数据为空");
 		}
+	}
+	
+	public void syncGames(){
+		String domain = SystemCache.getSysConfigVauleByKey(SysConstants.SERVER_DOMAIN);
+		String path = SystemCache.getSysConfigVauleByKey(SysConstants.GAME_PULL);
+		if (StringUtils.isNotBlank(domain)&&StringUtils.isNotBlank(path)) {
+			HttpRequest httpRequest = new HttpRequest();
+			Map<String,Object> params =  new HashMap<String, Object>();
+			params.put("token", MD5Util.createToken());
+			String resultStr = httpRequest.post(domain+path, params);
+			try {
+				Result result = JSONObject.parseObject(resultStr, Result.class);
+				if (Result.Code.SUCCESS.getValue().equals(result.getCode())) 
+				{
+					List<Game> gameList= JSONArray.parseArray(result.getContent().toString(), Game.class);
+					
+				}
+			} catch (Exception e) {
+				logger.error("uploadGameRecord error", e);;
+			}
+		}else{
+			logger.warn("请求url为空");
+		}
+	}
+	
+	public void syncDeviceInfo(){
+		
 	}
 	
 	/**
