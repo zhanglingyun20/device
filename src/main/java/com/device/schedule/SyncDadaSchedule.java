@@ -21,4 +21,13 @@ public class SyncDadaSchedule
 		syncDataService.uploadGameRecord();
 		logger.info("执行上传游戏数据====结束");
 	}
+	
+	
+	@Scheduled(cron = "0 0/1 * * * ?")
+	public void syncSystemCache()
+	{
+		logger.info("同步系统缓存===开始");
+		syncDataService.uploadGameRecord();
+		logger.info("同步系统缓存====结束");
+	}	
 }

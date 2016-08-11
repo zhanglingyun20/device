@@ -4,7 +4,7 @@ public class Result {
 
 	private String code;
 	private String message;
-	private Object o;
+	private Object content;
 
 	public enum Code {
 		SUCCESS("success"), FAILED("failed");
@@ -70,18 +70,20 @@ public class Result {
 		return "Result [code=" + code + ", message=" + message + "]";
 	}
 
-	public Object getO()
+	
+	
+	public Object getContent()
 	{
-		return o;
+		return content;
 	}
 
-	public void setO(Object o)
+	public void setContent(Object content)
 	{
-		this.o = o;
+		this.content = content;
 	}
-	
+
 	public Result addObject(Object o){
-		setO(o);
+		setContent(o);
 		return this;
 	}
 }
