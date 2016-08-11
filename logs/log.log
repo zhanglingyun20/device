@@ -413,3 +413,632 @@ Caused by: org.apache.ibatis.binding.BindingException: Parameter 'array' not fou
 2016-08-11 00:59:00,005 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
 2016-08-11 01:00:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
 2016-08-11 01:00:00,005 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:17:36,421 [org.springframework.context.support.ClassPathXmlApplicationContext]-[INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@64bf3bbf: startup date [Thu Aug 11 22:17:36 CST 2016]; root of context hierarchy
+2016-08-11 22:17:36,499 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from class path resource [spring-context.xml]
+2016-08-11 22:17:37,419 [org.springframework.context.support.PropertySourcesPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [config/jdbc.properties]
+2016-08-11 22:17:37,431 [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [log4j.properties]
+2016-08-11 22:17:38,801 [com.device.DeviceMain]-[INFO] server start...
+2016-08-11 22:17:40,045 [com.device.service.MonitorService]-[INFO] ========进程eclipse.exe开启===========
+2016-08-11 22:17:40,045 [com.device.service.MonitorService]-[INFO] ========进程chrome.exe开启===========
+2016-08-11 22:18:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:18:00,173 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:18:00,189 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:18:02,238 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@41ef1b6a result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq游戏","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:18:02,239 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:18:03,021 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:18:03,022 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:18:03,028 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:19:00,001 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:19:00,002 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:19:00,002 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:19:00,022 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@1d81a290 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:19:00,023 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:19:00,203 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:19:00,204 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:19:00,205 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:20:00,001 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:20:00,002 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:20:00,002 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:20:00,028 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@5bb93b71 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:20:00,029 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:20:00,248 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:20:00,249 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:20:00,251 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:20:24,902 [org.springframework.context.support.ClassPathXmlApplicationContext]-[INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@442d9b6e: startup date [Thu Aug 11 22:20:24 CST 2016]; root of context hierarchy
+2016-08-11 22:20:24,957 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from class path resource [spring-context.xml]
+2016-08-11 22:20:25,467 [org.springframework.context.support.PropertySourcesPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [config/jdbc.properties]
+2016-08-11 22:20:25,474 [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [log4j.properties]
+2016-08-11 22:20:26,193 [com.device.DeviceMain]-[INFO] server start...
+2016-08-11 22:20:26,857 [com.device.service.MonitorService]-[INFO] ========进程eclipse.exe开启===========
+2016-08-11 22:20:26,858 [com.device.service.MonitorService]-[INFO] ========进程chrome.exe开启===========
+2016-08-11 22:21:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:21:00,024 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:21:00,025 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:21:00,060 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:21:00,068 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:21:00,613 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@3f6684f5 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:21:00,613 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:21:01,047 [com.device.service.SyncDataService]-[WARN] 请求url为空
+2016-08-11 22:21:01,047 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:24:32,236 [org.springframework.context.support.ClassPathXmlApplicationContext]-[INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@64bf3bbf: startup date [Thu Aug 11 22:24:32 CST 2016]; root of context hierarchy
+2016-08-11 22:24:32,298 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from class path resource [spring-context.xml]
+2016-08-11 22:24:32,994 [org.springframework.context.support.PropertySourcesPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [config/jdbc.properties]
+2016-08-11 22:24:33,003 [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [log4j.properties]
+2016-08-11 22:24:37,486 [com.device.DeviceMain]-[INFO] server start...
+2016-08-11 22:24:38,258 [com.device.service.MonitorService]-[INFO] ========进程eclipse.exe开启===========
+2016-08-11 22:24:38,258 [com.device.service.MonitorService]-[INFO] ========进程chrome.exe开启===========
+2016-08-11 22:25:00,003 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:25:19,801 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:25:19,802 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:25:19,841 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:25:19,851 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:25:20,462 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@45f4c69d result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:25:20,463 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:25:20,764 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:25:47,779 [org.springframework.context.support.ClassPathXmlApplicationContext]-[INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@64bf3bbf: startup date [Thu Aug 11 22:25:47 CST 2016]; root of context hierarchy
+2016-08-11 22:25:47,851 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from class path resource [spring-context.xml]
+2016-08-11 22:25:48,452 [org.springframework.context.support.PropertySourcesPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [config/jdbc.properties]
+2016-08-11 22:25:48,459 [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [log4j.properties]
+2016-08-11 22:25:49,363 [com.device.DeviceMain]-[INFO] server start...
+2016-08-11 22:25:50,057 [com.device.service.MonitorService]-[INFO] ========进程eclipse.exe开启===========
+2016-08-11 22:25:50,058 [com.device.service.MonitorService]-[INFO] ========进程chrome.exe开启===========
+2016-08-11 22:26:00,001 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:26:00,077 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:26:00,089 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:26:00,733 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@4f8f5188 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:26:00,734 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:26:01,021 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:26:01,021 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:26:01,091 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:27:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:27:00,005 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:27:00,005 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:27:00,005 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:27:00,006 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:27:00,020 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@463fb7c7 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:27:00,021 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:27:00,432 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:30:04,790 [org.springframework.context.support.ClassPathXmlApplicationContext]-[INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@64bf3bbf: startup date [Thu Aug 11 22:30:04 CST 2016]; root of context hierarchy
+2016-08-11 22:30:04,854 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from class path resource [spring-context.xml]
+2016-08-11 22:30:05,443 [org.springframework.context.support.PropertySourcesPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [config/jdbc.properties]
+2016-08-11 22:30:05,451 [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [log4j.properties]
+2016-08-11 22:30:06,369 [com.device.DeviceMain]-[INFO] server start...
+2016-08-11 22:30:07,093 [com.device.service.MonitorService]-[INFO] ========进程eclipse.exe开启===========
+2016-08-11 22:30:07,093 [com.device.service.MonitorService]-[INFO] ========进程chrome.exe开启===========
+2016-08-11 22:31:00,000 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:31:00,040 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:31:00,041 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:31:00,083 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:31:00,092 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:31:00,694 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@7074be35 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:31:00,695 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:31:01,249 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:32:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:32:00,004 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:32:00,005 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:32:00,005 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:32:00,006 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:32:00,022 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@42598271 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:32:00,022 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:32:00,420 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:33:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:33:00,004 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:33:00,005 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:33:00,005 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:33:00,006 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:33:00,024 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@6ae0ebda result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:33:00,025 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:33:00,147 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:34:00,000 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:34:00,006 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:34:00,007 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:34:00,008 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:34:00,008 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:34:00,069 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@3932b4be result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:34:00,069 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:34:00,220 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:34:11,703 [com.device.service.MonitorService]-[INFO] ========进程qq.exe开启===========
+2016-08-11 22:35:00,001 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:35:00,001 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:35:00,002 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:35:00,020 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@2c6f9b71 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:35:00,020 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:35:00,155 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:35:00,158 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:35:00,161 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:36:00,001 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:36:00,003 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:36:00,004 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:36:00,005 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:36:00,005 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:36:00,018 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@6e4bbf0d result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:36:00,019 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:36:00,421 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:37:00,001 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:37:00,004 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:37:00,005 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:37:00,005 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:37:00,005 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:37:00,020 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@5876e520 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:37:00,020 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:37:00,451 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:38:00,001 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:38:00,001 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:38:00,002 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:38:00,018 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@7c74b4c7 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:38:00,019 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:38:00,538 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:38:00,538 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:38:00,540 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:39:00,000 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:39:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:39:00,003 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:39:00,003 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:39:00,004 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:39:00,028 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@1b456423 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:39:00,028 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:39:00,179 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:40:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:40:00,002 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:40:00,003 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:40:00,022 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@71937ae2 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:40:00,022 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:40:00,156 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:40:00,157 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:40:00,159 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:41:00,000 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:41:00,002 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:41:00,003 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:41:00,019 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@2cd970a4 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:41:00,020 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:41:00,189 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:41:00,190 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:41:00,193 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:41:59,371 [org.springframework.context.support.ClassPathXmlApplicationContext]-[INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@64bf3bbf: startup date [Thu Aug 11 22:41:59 CST 2016]; root of context hierarchy
+2016-08-11 22:41:59,447 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from class path resource [spring-context.xml]
+2016-08-11 22:42:00,165 [org.springframework.context.support.PropertySourcesPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [config/jdbc.properties]
+2016-08-11 22:42:00,176 [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [log4j.properties]
+2016-08-11 22:42:01,188 [com.device.DeviceMain]-[INFO] server start...
+2016-08-11 22:42:01,897 [com.device.service.MonitorService]-[INFO] ========进程eclipse.exe开启===========
+2016-08-11 22:42:01,897 [com.device.service.MonitorService]-[INFO] ========进程qq.exe开启===========
+2016-08-11 22:42:01,898 [com.device.service.MonitorService]-[INFO] ========进程chrome.exe开启===========
+2016-08-11 22:43:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:43:00,084 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:43:00,107 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:43:00,742 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@2e80cb99 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:43:00,743 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:43:15,357 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:43:15,358 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:43:15,363 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:44:00,000 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:44:00,001 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:44:00,002 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:44:00,022 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@6b51d88b result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:44:00,022 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:46:29,156 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:46:29,157 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/active_account
+2016-08-11 22:46:32,672 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@77ead7c2 result = {"code":"success","message":"success","content":null}
+2016-08-11 22:46:32,672 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:46:32,750 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:46:32,750 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:46:32,753 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:46:46,474 [org.springframework.context.support.ClassPathXmlApplicationContext]-[INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@64bf3bbf: startup date [Thu Aug 11 22:46:46 CST 2016]; root of context hierarchy
+2016-08-11 22:46:46,555 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from class path resource [spring-context.xml]
+2016-08-11 22:46:47,226 [org.springframework.context.support.PropertySourcesPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [config/jdbc.properties]
+2016-08-11 22:46:47,234 [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [log4j.properties]
+2016-08-11 22:46:48,258 [com.device.DeviceMain]-[INFO] server start...
+2016-08-11 22:46:48,949 [com.device.service.MonitorService]-[INFO] ========进程eclipse.exe开启===========
+2016-08-11 22:46:48,949 [com.device.service.MonitorService]-[INFO] ========进程qq.exe开启===========
+2016-08-11 22:46:48,949 [com.device.service.MonitorService]-[INFO] ========进程chrome.exe开启===========
+2016-08-11 22:47:00,001 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:47:00,037 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:47:00,037 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:47:00,074 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:47:00,084 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:47:00,694 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@431fd522 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:47:00,694 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:47:06,197 [com.device.service.SyncDataService]-[INFO] syncDeviceInfo 没有同步的设备信息
+2016-08-11 22:47:06,198 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:48:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:48:00,004 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:48:00,004 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:48:00,005 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:48:00,005 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:48:00,021 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@7854f6a4 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:48:00,022 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:48:00,168 [com.device.service.SyncDataService]-[INFO] syncDeviceInfo 没有同步的设备信息
+2016-08-11 22:48:00,168 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:49:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:49:00,005 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:49:00,005 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:49:00,005 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:49:00,006 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:49:00,021 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@4138d4b0 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:49:00,021 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:49:00,475 [com.device.service.SyncDataService]-[INFO] syncDeviceInfo 没有同步的设备信息
+2016-08-11 22:49:00,476 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:50:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:50:00,005 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:50:00,005 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:50:00,005 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:50:00,006 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:50:00,020 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@7614ecac result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:50:00,020 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:50:00,178 [com.device.service.SyncDataService]-[INFO] syncDeviceInfo 没有同步的设备信息
+2016-08-11 22:50:00,179 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:51:00,001 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:51:00,008 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:51:00,008 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:51:00,009 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:51:00,009 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:51:00,025 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@111a7288 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:51:00,026 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:51:00,196 [com.device.service.SyncDataService]-[INFO] syncDeviceInfo 没有同步的设备信息
+2016-08-11 22:51:00,196 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:52:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:52:00,002 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:52:00,003 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:52:00,016 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@36a461b1 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:52:00,016 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:52:00,163 [com.device.service.SyncDataService]-[INFO] syncDeviceInfo 没有同步的设备信息
+2016-08-11 22:52:00,163 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:52:00,163 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:52:00,166 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:53:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:53:00,005 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:53:00,006 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:53:00,006 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:53:00,006 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:53:00,018 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@2e6a2f6b result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:53:00,018 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:53:00,197 [com.device.service.SyncDataService]-[INFO] syncDeviceInfo 没有同步的设备信息
+2016-08-11 22:53:00,197 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:54:00,001 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:54:00,003 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:54:00,004 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:54:00,004 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:54:00,005 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:54:00,018 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@4cb56db1 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:54:00,019 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:54:00,165 [com.device.service.SyncDataService]-[INFO] syncDeviceInfo 没有同步的设备信息
+2016-08-11 22:54:00,166 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:55:00,000 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:55:00,003 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:55:00,003 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:55:00,004 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:55:00,004 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:55:00,015 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@721671c5 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:55:00,015 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:55:00,139 [com.device.service.SyncDataService]-[INFO] syncDeviceInfo 没有同步的设备信息
+2016-08-11 22:55:00,140 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:55:36,185 [org.springframework.context.support.ClassPathXmlApplicationContext]-[INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@64bf3bbf: startup date [Thu Aug 11 22:55:36 CST 2016]; root of context hierarchy
+2016-08-11 22:55:36,271 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from class path resource [spring-context.xml]
+2016-08-11 22:55:37,497 [org.springframework.context.support.PropertySourcesPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [config/jdbc.properties]
+2016-08-11 22:55:37,505 [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [log4j.properties]
+2016-08-11 22:55:38,493 [com.device.DeviceMain]-[INFO] server start...
+2016-08-11 22:55:39,209 [com.device.service.MonitorService]-[INFO] ========进程eclipse.exe开启===========
+2016-08-11 22:55:39,210 [com.device.service.MonitorService]-[INFO] ========进程qq.exe开启===========
+2016-08-11 22:55:39,210 [com.device.service.MonitorService]-[INFO] ========进程chrome.exe开启===========
+2016-08-11 22:56:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:56:00,064 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:56:00,071 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:56:01,773 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@3a19366c result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:56:01,774 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:56:02,146 [com.device.service.SyncDataService]-[INFO] syncDeviceInfo 没有同步的设备信息
+2016-08-11 22:56:02,147 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 22:56:02,148 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:56:02,155 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:57:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 22:57:00,004 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 22:57:00,005 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 22:57:00,006 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 22:57:00,006 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 22:57:00,029 [com.device.common.util.HttpRequest]-[INFO] execute http result... ;request:org.apache.http.params.BasicHttpParams@25e5cee4 result = {"code":"success","message":"success","content":[{"id":1,"gameCode":"qq","gameName":"qq","gameVersion":"1.0","gameProcess":"qq.exe","state":"active","createTime":1470738724000},{"id":2,"gameCode":"eclipse","gameName":"eclipse","gameVersion":"1.0","gameProcess":"eclipse.exe","state":"active","createTime":1470845484000},{"id":3,"gameCode":"chrome","gameName":"chrome","gameVersion":"1.0","gameProcess":"chrome.exe","state":"active","createTime":1470845487000}]}
+2016-08-11 22:57:00,029 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 22:57:00,162 [com.device.service.SyncDataService]-[INFO] syncDeviceInfo 没有同步的设备信息
+2016-08-11 22:57:00,163 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 23:16:16,396 [org.springframework.context.support.ClassPathXmlApplicationContext]-[INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@64bf3bbf: startup date [Thu Aug 11 23:16:16 CST 2016]; root of context hierarchy
+2016-08-11 23:16:16,471 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from class path resource [spring-context.xml]
+2016-08-11 23:16:17,046 [org.springframework.context.support.PropertySourcesPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [config/jdbc.properties]
+2016-08-11 23:16:17,055 [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]-[INFO] Loading properties file from class path resource [log4j.properties]
+2016-08-11 23:16:17,957 [com.device.DeviceMain]-[INFO] server start...
+2016-08-11 23:16:19,560 [com.device.service.MonitorService]-[INFO] ========进程eclipse.exe开启===========
+2016-08-11 23:16:19,561 [com.device.service.MonitorService]-[INFO] ========进程qq.exe开启===========
+2016-08-11 23:16:19,561 [com.device.service.MonitorService]-[INFO] ========进程chrome.exe开启===========
+2016-08-11 23:16:32,320 [com.device.service.MonitorService]-[INFO] ========进程chrome.exe关闭===========
+2016-08-11 23:16:45,134 [com.device.service.MonitorService]-[INFO] ========进程chrome.exe开启===========
+2016-08-11 23:16:58,045 [com.device.service.MonitorService]-[INFO] ========进程chrome.exe关闭===========
+2016-08-11 23:17:00,003 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 23:17:02,458 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 23:17:02,468 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/game_run_record
+2016-08-11 23:17:04,557 [com.device.common.util.HttpRequest]-[ERROR] execute reauest error 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:107)
+	at com.device.common.util.HttpRequest.invoke(HttpRequest.java:115)
+	at com.device.common.util.HttpRequest.post(HttpRequest.java:82)
+	at com.device.service.SyncDataService.uploadGameRecord(SyncDataService.java:58)
+	at com.device.service.SyncDataService$$FastClassBySpringCGLIB$$88c84f2c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:649)
+	at com.device.service.SyncDataService$$EnhancerBySpringCGLIB$$d7a781b3.uploadGameRecord(<generated>)
+	at com.device.schedule.SyncDadaSchedule.syncGameRunRecord(SyncDadaSchedule.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 31 more
+2016-08-11 23:17:04,561 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 23:17:04,563 [com.device.service.SyncDataService]-[ERROR] uploadGameRecord error
+java.lang.NullPointerException
+	at com.device.service.SyncDataService.uploadGameRecord(SyncDataService.java:61)
+	at com.device.service.SyncDataService$$FastClassBySpringCGLIB$$88c84f2c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:649)
+	at com.device.service.SyncDataService$$EnhancerBySpringCGLIB$$d7a781b3.uploadGameRecord(<generated>)
+	at com.device.schedule.SyncDadaSchedule.syncGameRunRecord(SyncDadaSchedule.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-11 23:17:04,564 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束
+2016-08-11 23:17:04,565 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 23:17:04,570 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 23:17:04,571 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 23:17:06,578 [com.device.common.util.HttpRequest]-[ERROR] execute reauest error 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:107)
+	at com.device.common.util.HttpRequest.invoke(HttpRequest.java:115)
+	at com.device.common.util.HttpRequest.post(HttpRequest.java:82)
+	at com.device.service.SyncDataService.syncGames(SyncDataService.java:85)
+	at com.device.service.SyncDataService$$FastClassBySpringCGLIB$$88c84f2c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:649)
+	at com.device.service.SyncDataService$$EnhancerBySpringCGLIB$$d7a781b3.syncGames(<generated>)
+	at com.device.schedule.SyncDadaSchedule.syncSystemCache(SyncDadaSchedule.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 31 more
+2016-08-11 23:17:06,579 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 23:17:06,580 [com.device.service.SyncDataService]-[ERROR] uploadGameRecord error
+java.lang.NullPointerException
+	at com.device.service.SyncDataService.syncGames(SyncDataService.java:88)
+	at com.device.service.SyncDataService$$FastClassBySpringCGLIB$$88c84f2c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:649)
+	at com.device.service.SyncDataService$$EnhancerBySpringCGLIB$$d7a781b3.syncGames(<generated>)
+	at com.device.schedule.SyncDadaSchedule.syncSystemCache(SyncDadaSchedule.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-11 23:17:06,584 [com.device.service.SyncDataService]-[INFO] syncDeviceInfo 没有同步的设备信息
+2016-08-11 23:17:06,584 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 23:18:00,002 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存===开始
+2016-08-11 23:18:00,008 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 23:18:00,008 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/get_games
+2016-08-11 23:18:02,015 [com.device.common.util.HttpRequest]-[ERROR] execute reauest error 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:107)
+	at com.device.common.util.HttpRequest.invoke(HttpRequest.java:115)
+	at com.device.common.util.HttpRequest.post(HttpRequest.java:82)
+	at com.device.service.SyncDataService.syncGames(SyncDataService.java:85)
+	at com.device.service.SyncDataService$$FastClassBySpringCGLIB$$88c84f2c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:649)
+	at com.device.service.SyncDataService$$EnhancerBySpringCGLIB$$d7a781b3.syncGames(<generated>)
+	at com.device.schedule.SyncDadaSchedule.syncSystemCache(SyncDadaSchedule.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 31 more
+2016-08-11 23:18:02,015 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 23:18:02,016 [com.device.service.SyncDataService]-[ERROR] uploadGameRecord error
+java.lang.NullPointerException
+	at com.device.service.SyncDataService.syncGames(SyncDataService.java:88)
+	at com.device.service.SyncDataService$$FastClassBySpringCGLIB$$88c84f2c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:649)
+	at com.device.service.SyncDataService$$EnhancerBySpringCGLIB$$d7a781b3.syncGames(<generated>)
+	at com.device.schedule.SyncDadaSchedule.syncSystemCache(SyncDadaSchedule.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-11 23:18:02,018 [com.device.service.SyncDataService]-[INFO] syncDeviceInfo 没有同步的设备信息
+2016-08-11 23:18:02,018 [com.device.schedule.SyncDadaSchedule]-[INFO] 同步系统缓存====结束
+2016-08-11 23:18:02,019 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据任务====开始
+2016-08-11 23:18:02,024 [com.device.common.util.HttpRequest]-[INFO] set utf-8 form entity to httppost ...
+2016-08-11 23:18:02,025 [com.device.common.util.HttpRequest]-[INFO] create httppost : http://localhost:8080/management/sync/game_run_record
+2016-08-11 23:18:04,029 [com.device.common.util.HttpRequest]-[ERROR] execute reauest error 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:107)
+	at com.device.common.util.HttpRequest.invoke(HttpRequest.java:115)
+	at com.device.common.util.HttpRequest.post(HttpRequest.java:82)
+	at com.device.service.SyncDataService.uploadGameRecord(SyncDataService.java:58)
+	at com.device.service.SyncDataService$$FastClassBySpringCGLIB$$88c84f2c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:649)
+	at com.device.service.SyncDataService$$EnhancerBySpringCGLIB$$d7a781b3.uploadGameRecord(<generated>)
+	at com.device.schedule.SyncDadaSchedule.syncGameRunRecord(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 31 more
+2016-08-11 23:18:04,030 [com.device.common.util.HttpRequest]-[INFO] release http ...
+2016-08-11 23:18:04,030 [com.device.service.SyncDataService]-[ERROR] uploadGameRecord error
+java.lang.NullPointerException
+	at com.device.service.SyncDataService.uploadGameRecord(SyncDataService.java:61)
+	at com.device.service.SyncDataService$$FastClassBySpringCGLIB$$88c84f2c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:649)
+	at com.device.service.SyncDataService$$EnhancerBySpringCGLIB$$d7a781b3.uploadGameRecord(<generated>)
+	at com.device.schedule.SyncDadaSchedule.syncGameRunRecord(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-11 23:18:04,031 [com.device.schedule.SyncDadaSchedule]-[INFO] 执行上传游戏数据====结束

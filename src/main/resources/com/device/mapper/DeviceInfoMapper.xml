@@ -31,6 +31,13 @@
 		from device_info
 		where id = #{id,jdbcType=INTEGER}
 	</select>
+	
+	<select id="getNoSync" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from device_info
+		where is_sync !='yes' OR is_sync is null
+	</select>
 	<select id="getAllDevices" resultMap="BaseResultMap" >
 		select
 		<include refid="Base_Column_List" />
@@ -211,5 +218,11 @@
 		create_time =
 		#{createTime,jdbcType=TIMESTAMP}
 		where id = #{id,jdbcType=INTEGER}
+	</update>
+	
+	
+	<update id="updateSync">
+		update device_info
+		set is_sync = 'yes'
 	</update>
 </mapper>

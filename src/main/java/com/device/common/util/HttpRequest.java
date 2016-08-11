@@ -11,11 +11,14 @@ import java.util.Set;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
@@ -33,7 +36,7 @@ public class HttpRequest
 	/**
 	 * 默认HTTP请求客户端对象。
 	 */
-	private DefaultHttpClient _httpclient;
+	private CloseableHttpClient  _httpclient;
 
 	/**
 	 * 用户自定义消息头。
@@ -46,7 +49,7 @@ public class HttpRequest
 	public HttpRequest() 
 	{
 		// 1. 创建HttpClient对象。
-		_httpclient = new DefaultHttpClient();
+		_httpclient =  HttpClients.createDefault();
 	}
 
 	/**
@@ -57,7 +60,7 @@ public class HttpRequest
 	public HttpRequest(Map<String, String> headers) 
 	{
 		// 1. 创建HttpClient对象。
-		_httpclient = new DefaultHttpClient();
+		_httpclient = HttpClients.createDefault();
 		this._headers = headers;
 		logger.info("create _httpclient ...");
 	}
@@ -74,6 +77,7 @@ public class HttpRequest
 	{
 		// 2. 创建请求方法的实例，并指定请求URL，添加请求参数。
 		HttpPost post = postParams(url, params);
+		
 		logger.info("create httppost : " + url);
 		return invoke(post);
 	}

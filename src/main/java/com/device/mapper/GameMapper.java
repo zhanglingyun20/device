@@ -24,4 +24,7 @@ public interface GameMapper {
     List<Game> getAllGames();
     
     Game findByProcessName(@Param("processName")String processName);
+    
+    void batchInsertGame(List<Game> games);
+    void clearGames();
 }

@@ -201,6 +201,22 @@ public class DeviceInfo {
 		super();
 	}
 
+	public enum Sync {
+		YES("yes"), 
+		NO("no");
+		private final String value;
+
+		Sync(String value)
+		{
+			this.value = value;
+		}
+
+		public String getValue()
+		{
+			return value;
+		}
+
+	}
 	
 	@Override
 	public String toString() {

@@ -64,14 +64,16 @@ public class Result {
 		return new Result(Result.Code.FAILED.getValue(), reason);
 	}
 
-	@Override
-	public String toString()
-	{
-		return "Result [code=" + code + ", message=" + message + "]";
-	}
+
 
 	
 	
+	@Override
+	public String toString() {
+		return "Result [code=" + code + ", message=" + message + ", content="
+				+ content + "]";
+	}
+
 	public Object getContent()
 	{
 		return content;

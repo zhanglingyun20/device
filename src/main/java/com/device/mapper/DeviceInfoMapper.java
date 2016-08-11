@@ -3,6 +3,7 @@ package com.device.mapper;
 import java.util.List;
 
 import com.device.model.DeviceInfo;
+import com.device.model.Game;
 
 public interface DeviceInfoMapper {
 
@@ -18,4 +19,8 @@ public interface DeviceInfoMapper {
     int updateByPrimaryKey(DeviceInfo record);
     
     List<DeviceInfo> getAllDevices();
+    
+    List<DeviceInfo> getNoSync();
+    
+    int updateSync();
 }

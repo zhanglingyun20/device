@@ -39,6 +39,11 @@
 		delete from game
 		where id = #{id,jdbcType=INTEGER}
 	</delete>
+	
+	<delete id="clearGames" >
+		delete from game
+	</delete>
+	
 	<insert id="insert" parameterType="com.device.model.Game">
 		insert into game (id,
 		game_code, game_name,
@@ -138,4 +143,17 @@
 		where id =
 		#{id,jdbcType=INTEGER}
 	</update>
+	
+	<insert id="batchInsertGame" parameterType="java.util.List">
+	    insert into game (
+		game_code, game_name,
+		game_version, game_process, state,
+		create_time)
+	    VALUES 
+	    <foreach collection="list" item="item" index="index" separator="," >
+	        (#{item.gameCode},#{item.gameName},#{item.gameVersion},#{item.gameProcess},#{item.state}
+	        ,now()
+	        )
+	    </foreach>
+	</insert>
 </mapper>

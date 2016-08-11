@@ -8,6 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -17,6 +18,8 @@ import com.device.common.SysConstants;
 import com.device.common.SystemCache;
 import com.device.common.util.HttpRequest;
 import com.device.common.util.MD5Util;
+import com.device.mapper.DeviceInfoMapper;
+import com.device.mapper.GameMapper;
 import com.device.mapper.GameRunRecordMapper;
 import com.device.model.DeviceInfo;
 import com.device.model.Game;
@@ -30,6 +33,12 @@ public class SyncDataService
 	@Autowired
 	private GameRunRecordMapper gameRunRecordMapper;
 	
+	@Autowired
+	private GameMapper gameMapper;
+	
+	@Autowired
+	private DeviceInfoMapper deviceInfoMapper;
+	
 	
 	public void uploadGameRecord(){
 		List<GameRunRecord> gameRecords = gameRunRecordMapper.findByNoSync();
@@ -40,56 +49,97 @@ public class SyncDataService
 		}
 		if (gameRecords!=null&&!gameRecords.isEmpty()&&deviceInfo!=null) {
 			GameRunRecordRequest requstData = new GameRunRecordRequest(deviceInfo, gameRecords);
-			String domain = SystemCache.getSysConfigVauleByKey(SysConstants.SERVER_DOMAIN);
-			String path = SystemCache.getSysConfigVauleByKey(SysConstants.SYNC_GAME_RECORD);
-			if (StringUtils.isNotBlank(domain)&&StringUtils.isNotBlank(path)) {
+			String url = bulidRequesUrl(SysConstants.SYNC_GAME_RECORD);
+			if (StringUtils.isNotBlank(url)) {
 				HttpRequest httpRequest = new HttpRequest();
 				Map<String,Object> params =  new HashMap<String, Object>();
 				params.put("token", MD5Util.createToken());
 				params.put("data", JSONObject.toJSONString(requstData));
-				String resultStr = httpRequest.post(domain+path, params);
+				String resultStr = httpRequest.post(url, params);
 				try {
 					Result result = JSONObject.parseObject(resultStr, Result.class);
 					if (Result.Code.SUCCESS.getValue().equals(result.getCode())) {
 						clearGameRecordHistiry(gameRecords);
+					}else
+					{
+						logger.info("uploadGameRecord 同步消息返回："+result.toString());
 					}
 				} catch (Exception e) {
 					logger.error("uploadGameRecord error", e);;
 				}
 			}else{
-				logger.warn("请求url为空");
+				logger.warn("uploadGameRecord 请求url为空");
 			}
 		}else
 		{
-			logger.debug("上传数据为空");
+			logger.debug("uploadGameRecord 上传数据为空");
 		}
 	}
 	
 	public void syncGames(){
-		String domain = SystemCache.getSysConfigVauleByKey(SysConstants.SERVER_DOMAIN);
-		String path = SystemCache.getSysConfigVauleByKey(SysConstants.GAME_PULL);
-		if (StringUtils.isNotBlank(domain)&&StringUtils.isNotBlank(path)) {
+		String url = bulidRequesUrl(SysConstants.GAME_PULL);
+		if (StringUtils.isNotBlank(url)) {
 			HttpRequest httpRequest = new HttpRequest();
 			Map<String,Object> params =  new HashMap<String, Object>();
 			params.put("token", MD5Util.createToken());
-			String resultStr = httpRequest.post(domain+path, params);
+			String resultStr = httpRequest.post(url, params);
 			try {
 				Result result = JSONObject.parseObject(resultStr, Result.class);
 				if (Result.Code.SUCCESS.getValue().equals(result.getCode())) 
 				{
 					List<Game> gameList= JSONArray.parseArray(result.getContent().toString(), Game.class);
-					
+					if (gameList!=null&&!gameList.isEmpty()) {
+						saveGames(gameList);
+						SystemCache.initGames();
+					}
+				}else
+				{
+					logger.info("syncGames 同步消息返回："+result.toString());
 				}
 			} catch (Exception e) {
 				logger.error("uploadGameRecord error", e);;
 			}
 		}else{
-			logger.warn("请求url为空");
+			logger.warn("syncGames 请求url为空");
 		}
 	}
 	
+	
+	@Transactional
+	public void saveGames(List<Game> gameList){
+		gameMapper.clearGames();
+		gameMapper.batchInsertGame(gameList);
+	}
+	
 	public void syncDeviceInfo(){
-		
+		String url = bulidRequesUrl(SysConstants.ACTIVE_USER);
+		List<DeviceInfo> infos = deviceInfoMapper.getNoSync();
+		if (infos==null||infos.isEmpty()) {
+			logger.info("syncDeviceInfo 没有同步的设备信息");
+			return;
+		}
+		if (StringUtils.isNotBlank(url)) {
+			HttpRequest httpRequest = new HttpRequest();
+			Map<String,Object> params =  new HashMap<String, Object>();
+			params.put("token", MD5Util.createToken());
+			params.put("data", JSONObject.toJSONString(infos.get(0)));
+			String resultStr = httpRequest.post(url, params);
+			try {
+				Result result = JSONObject.parseObject(resultStr, Result.class);
+				if (Result.Code.SUCCESS.getValue().equals(result.getCode())) 
+				{
+					deviceInfoMapper.updateSync();
+					SystemCache.initDeviceInfo();
+				}else
+				{
+					logger.info("syncDeviceInfo 同步消息返回："+result.toString());
+				}
+			} catch (Exception e) {
+				logger.error("uploadGameRecord error", e);;
+			}
+		}else{
+			logger.warn("syncDeviceInfo  请求url为空");
+		}
 	}
 	
 	/**
@@ -102,5 +152,11 @@ public class SyncDataService
 		if (gameRecords!=null&&!gameRecords.isEmpty()) {
 			gameRunRecordMapper.batchDeleteHistory(gameRecords);
 		}
+	}
+	
+	private String bulidRequesUrl(String path){
+		String domain = SystemCache.getSysConfigVauleByKey(SysConstants.SERVER_DOMAIN);
+		path = SystemCache.getSysConfigVauleByKey(path);
+		return domain+path;
 	}
 }
