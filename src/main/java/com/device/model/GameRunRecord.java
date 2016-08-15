@@ -12,12 +12,13 @@ public class GameRunRecord {
      * 游戏id
      */
     private Integer gameId;
-
+    
     /**
      * 游戏编码
      */
     private String gameCode;
     private String gameProcess;
+    private String gameName;
 
     /**
      * 运行时长(单位：分钟)
@@ -85,13 +86,23 @@ public class GameRunRecord {
     }
 
 
+    
 
-	public GameRunRecord(Integer id, Integer gameId, String gameCode,
+	public String getGameName() {
+		return gameName;
+	}
+
+	public void setGameName(String gameName) {
+		this.gameName = gameName;
+	}
+
+	public GameRunRecord(Integer id, Integer gameId, String gameCode,String gameName,
 			String gameProcess, Integer runCount, String isSync, Date createTime) {
 		super();
 		this.id = id;
 		this.gameId = gameId;
 		this.gameCode = gameCode;
+		this.gameName = gameName;
 		this.gameProcess = gameProcess;
 		this.runCount = runCount;
 		this.isSync = isSync;

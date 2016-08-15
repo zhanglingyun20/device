@@ -2,7 +2,6 @@ package com.device.service;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -41,18 +40,21 @@ public class MonitorService {
 		return SystemCache.getChacheByClass(Game.class);
 	}
 	
+	/**
+	 * 处理关闭游戏数据
+	 * @author sawyer
+	 * @date 2016年8月15日
+	 * @param processList
+	 */
 	public void handleProcess(Set<String> processList){
 		List<String> offGames = findOffGame(toLowerCase(processList));
 		if (offGames!=null&&!offGames.isEmpty()) 
 		{
-			for (String processName : offGames) {
-				Game game = gameMapper.findByProcessName(processName);
-				int gameId = 0;
-				if (game!=null)
-				{
-					gameId = game.getId();
-				}
-				GameRunRecord record = new GameRunRecord(null, gameId, game.getGameCode(),processName, 1, GameRunRecord.Sync.NO.getValue(), new Date());
+			for (String processName : offGames) 
+			{
+				String gameCode = "GAME_"+processName.hashCode();
+				String gameName = "NAME_"+processName.hashCode();
+				GameRunRecord record = new GameRunRecord(null, 0, gameCode, gameName, processName, 1, GameRunRecord.Sync.NO.getValue(), new Date());
 				gameRunRecordMapper.insertSelective(record);
 			}
 		}
@@ -78,12 +80,12 @@ public class MonitorService {
 	public List<String> findOffGame(Set<String> processSet)
 	{
 		List<String> offGameList = new ArrayList<String>();
-		Map<String,Game> monitorMap = new HashMap<String, Game>();
-		List<Game> monitorGames = getMonitorGames();//需要监控的游戏进程
-		if (monitorGames!=null&&!monitorGames.isEmpty()) {
-			for (Game game : monitorGames) {
-				monitorMap.put(game.getGameProcess().toLowerCase(), game);//进程名 key 全部转小写
-			}
+//		Map<String,Game> monitorMap = new HashMap<String, Game>();
+//		List<Game> monitorGames = getMonitorGames();//需要监控的游戏进程
+//		if (monitorGames!=null&&!monitorGames.isEmpty()) {
+//			for (Game game : monitorGames) {
+//				monitorMap.put(game.getGameProcess().toLowerCase(), game);//进程名 key 全部转小写
+//			}
 			Map<String, String> monitorCache = MonitorCache.getMonitorMap();
 			
 			//找出缓存中有，但是次此扫描没有扫描到程序进程。 这些进程为关闭了得进程
@@ -97,7 +99,7 @@ public class MonitorService {
 					if (MonitorCache.OPEN.equalsIgnoreCase(stateVaule)&&!processSet.contains(key)) {
 						offGameList.add(key);//记录已关闭的记录入库
 						monitorCache.put(key, MonitorCache.OFF);
-						logger.info("========进程"+key +"关闭===========");
+						logger.info("======== Process "+key +" 	off ===========");
 					}
 				}
 			}
@@ -107,26 +109,26 @@ public class MonitorService {
 				{
 					processName = processName.toLowerCase();
 					//进程名 包含在游戏监控列表里面才处理
-					if (monitorMap.containsKey(processName)) {
+//					if (monitorMap.containsKey(processName)) {
 						//缓存中没有的，标记为已打开。
 						if (!monitorCache.containsKey(processName)) {
 							monitorCache.put(processName, MonitorCache.OPEN);
-							logger.info("========进程"+processName +"开启===========");
+							logger.info("========Process "+processName +"	open ===========");
 						}else{
 							//缓存中有的，判断状态，如果是off状态，设置
 							String processState = monitorCache.get(processName);
 							if (MonitorCache.OFF.equals(processState))
 							{
 								monitorCache.put(processName, MonitorCache.OPEN);
-								logger.info("========进程"+processName +"开启===========");
+								logger.info("========进程"+processName +"	开启===========");
 							}else if(MonitorCache.OPEN.equals(processState)){
-								logger.debug("========进程"+processName +"正在跑===========");
+//								logger.debug("========进程"+processName +"正在跑===========");
 							}
 						}
-					}
+//					}
 				}
 			}
-		}
+//		}
 		return offGameList;
 	}
 }

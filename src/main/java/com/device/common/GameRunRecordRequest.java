@@ -32,6 +32,8 @@ public class GameRunRecordRequest {
 	 * 设备mac
 	 */
 	private String deviceMac;
+
+	private String deviceCode;
 	/**
 	 * 设备名称
 	 */
@@ -44,99 +46,96 @@ public class GameRunRecordRequest {
 
 	private List<GameRecordVO> record;
 
-	public String getAccount()
-	{
+	public String getAccount() {
 		return account;
 	}
 
-	public void setAccount(String account)
-	{
+	public void setAccount(String account) {
 		this.account = account;
 	}
 
-	public String getDeviceMac()
-	{
+	public String getDeviceMac() {
 		return deviceMac;
 	}
 
-	public void setDeviceMac(String deviceMac)
-	{
+	public void setDeviceMac(String deviceMac) {
 		this.deviceMac = deviceMac;
 	}
 
-	public String getDeviceName()
-	{
+	public String getDeviceCode() {
+		return deviceCode;
+	}
+
+	public void setDeviceCode(String deviceCode) {
+		this.deviceCode = deviceCode;
+	}
+
+	public String getDeviceName() {
 		return deviceName;
 	}
 
-	public void setDeviceName(String deviceName)
-	{
+	public void setDeviceName(String deviceName) {
 		this.deviceName = deviceName;
 	}
 
-	public Date getUploadTime()
-	{
+	public Date getUploadTime() {
 		return uploadTime;
 	}
 
-	public void setUploadTime(Date uploadTime)
-	{
+	public void setUploadTime(Date uploadTime) {
 		this.uploadTime = uploadTime;
 	}
 
-	public List<GameRecordVO> getRecord()
-	{
+	public List<GameRecordVO> getRecord() {
 		return record;
 	}
 
-	public void setRecord(List<GameRecordVO> record)
-	{
+	public void setRecord(List<GameRecordVO> record) {
 		this.record = record;
 	}
 
-	@Override
-	public String toString()
-	{
-		return "GameRunRecordRequest [account=" + account + ", deviceMac=" + deviceMac + ", deviceName=" + deviceName + ", uploadTime=" + uploadTime + ", record=" + record + ", getAccount()="
-				+ getAccount() + ", getDeviceMac()=" + getDeviceMac() + ", getDeviceName()=" + getDeviceName() + ", getUploadTime()=" + getUploadTime() + ", getRecord()=" + getRecord() + "]";
-	}
-
-	public GameRunRecordRequest(String account, String deviceMac, String deviceName, Date uploadTime, List<GameRecordVO> record)
-	{
+	public GameRunRecordRequest(String account, String deviceMac,
+			String deviceCode, String deviceName, Date uploadTime,
+			List<GameRecordVO> record) {
 		super();
 		this.account = account;
 		this.deviceMac = deviceMac;
+		this.deviceCode = deviceCode;
 		this.deviceName = deviceName;
 		this.uploadTime = uploadTime;
 		this.record = record;
 	}
 
-	public GameRunRecordRequest()
-	{
+	public GameRunRecordRequest() {
 		super();
 	}
-	
-	public GameRunRecordRequest(DeviceInfo deviceInfo,List<GameRunRecord> gameRecords){
-		if (deviceInfo!=null)
-		{
-			setAccount(deviceInfo.getAccount());
-			setDeviceMac(deviceInfo.getDeviceMac());
-			setDeviceName(deviceInfo.getDeviceName());
-			setUploadTime(new Date());
-			List<GameRecordVO> bulidRecord=new ArrayList<GameRecordVO>();
-			if (gameRecords!=null&&!gameRecords.isEmpty())
-			{
-				for (GameRunRecord gameRunRecord : gameRecords)
-				{
-					GameRecordVO vo =new GameRecordVO();
-					vo.setCreateTime(gameRunRecord.getCreateTime());
-					vo.setGameCode(gameRunRecord.getGameCode());
-					vo.setRunCount(1);
-					vo.setProcessName(gameRunRecord.getGameProcess());
-					bulidRecord.add(vo);
-				}
-				setRecord(bulidRecord);
+
+	@Override
+	public String toString() {
+		return "GameRunRecordRequest [account=" + account + ", deviceMac="
+				+ deviceMac + ", deviceCode=" + deviceCode + ", deviceName="
+				+ deviceName + ", uploadTime=" + uploadTime + ", record="
+				+ record + "]";
+	}
+
+	public GameRunRecordRequest(DeviceInfo deviceInfo,List<GameRunRecord> gameRecords) {
+		setAccount(deviceInfo.getAccount());
+		setDeviceCode(deviceInfo.getDeviceCode());
+		setDeviceMac(deviceInfo.getDeviceMac());
+		setDeviceName(deviceInfo.getDeviceName());
+		setUploadTime(new Date());
+		List<GameRecordVO> recordVos = new ArrayList<GameRecordVO>();
+		if (gameRecords!=null&&!gameRecords.isEmpty()) {
+			for (GameRunRecord gameRunRecord : gameRecords) {
+				GameRecordVO vo = new GameRecordVO();
+				vo.setCreateTime(gameRunRecord.getCreateTime());
+				vo.setGameCode(gameRunRecord.getGameCode());
+				vo.setGameName(gameRunRecord.getGameName());
+				vo.setRunCount(gameRunRecord.getRunCount());
+				vo.setGameProcess(gameRunRecord.getGameProcess());
+				recordVos.add(vo);
 			}
 		}
+		setRecord(recordVos);
 	}
 }

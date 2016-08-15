@@ -51,7 +51,7 @@
 		device_info
 		where id = #{id,jdbcType=INTEGER}
 	</delete>
-	<insert id="insert" parameterType="com.device.model.DeviceInfo">
+	<insert id="insert" parameterType="com.device.model.DeviceInfo" useGeneratedKeys="true" keyProperty="id">
 		insert into device_info (id,
 		account, username,
 		password, device_mac, device_code,

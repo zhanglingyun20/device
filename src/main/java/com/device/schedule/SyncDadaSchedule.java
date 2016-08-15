@@ -14,7 +14,7 @@ public class SyncDadaSchedule
 	@Autowired
 	private SyncDataService syncDataService;
 	
-//	@Scheduled(cron = "0 0/1 * * * ?")
+	@Scheduled(cron = "0 0/1 * * * ?")
 	public void syncGameRunRecord()
 	{
 		logger.info("执行上传游戏数据任务====开始");

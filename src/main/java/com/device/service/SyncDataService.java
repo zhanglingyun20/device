@@ -56,14 +56,21 @@ public class SyncDataService
 				params.put("token", MD5Util.createToken());
 				params.put("data", JSONObject.toJSONString(requstData));
 				String resultStr = httpRequest.post(url, params);
+				logger.info("上传参数=="+params);
 				try {
 					Result result = JSONObject.parseObject(resultStr, Result.class);
-					if (Result.Code.SUCCESS.getValue().equals(result.getCode())) {
-						clearGameRecordHistiry(gameRecords);
+					if (result!=null) {
+						if (Result.Code.SUCCESS.getValue().equals(result.getCode())) {
+							clearGameRecordHistiry(gameRecords);
+						}else
+						{
+							logger.info("uploadGameRecord 同步消息返回："+result.toString());
+						}
 					}else
 					{
-						logger.info("uploadGameRecord 同步消息返回："+result.toString());
+						logger.info("请求超时");
 					}
+
 				} catch (Exception e) {
 					logger.error("uploadGameRecord error", e);;
 				}
