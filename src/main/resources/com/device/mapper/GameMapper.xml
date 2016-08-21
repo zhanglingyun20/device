@@ -7,11 +7,13 @@
 		<result column="game_name" property="gameName" jdbcType="VARCHAR" />
 		<result column="game_version" property="gameVersion" jdbcType="VARCHAR" />
 		<result column="game_process" property="gameProcess" jdbcType="VARCHAR" />
+		<result column="default_price" property="defaultPrice" jdbcType="DOUBLE" />
+		<result column="billing_time" property="billingTime" jdbcType="INTEGER"/>
 		<result column="state" property="state" jdbcType="VARCHAR" />
 		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
 	</resultMap>
 	<sql id="Base_Column_List">
-		id, game_code, game_name, game_version, game_process,
+		id, game_code, game_name, game_version, game_process,default_price,billing_time,
 		state, create_time
 	</sql>
 	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
@@ -28,6 +30,7 @@
 		<include refid="Base_Column_List" />
 		from game
 		where game_process = #{processName}
+		order id desc limit 1
 	</select>
 	
 	<select id="getAllGames" resultMap="BaseResultMap">
@@ -45,14 +48,13 @@
 	</delete>
 	
 	<insert id="insert" parameterType="com.device.model.Game">
-		insert into game (id,
-		game_code, game_name,
-		game_version, game_process, state,
+		insert into game (id, game_code, game_name,
+		game_version, game_process, default_price,billing_time,state,
 		create_time)
 		values (#{id,jdbcType=INTEGER}, #{gameCode,jdbcType=VARCHAR},
 		#{gameName,jdbcType=VARCHAR},
-		#{gameVersion,jdbcType=VARCHAR},
-		#{gameProcess,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR},
+		#{gameVersion,jdbcType=VARCHAR}, #{gameProcess,jdbcType=VARCHAR}, #{defaultPrice},
+		#{billingTime},#{state,jdbcType=VARCHAR},
 		#{createTime,jdbcType=TIMESTAMP})
 	</insert>
 	<insert id="insertSelective" parameterType="com.device.model.Game">
@@ -72,6 +74,12 @@
 			</if>
 			<if test="gameProcess != null">
 				game_process,
+			</if>
+			<if test="defaultPrice != null">
+				default_price,
+			</if>
+			<if test="billingTime != null">
+				billing_time,
 			</if>
 			<if test="state != null">
 				state,
@@ -96,6 +104,12 @@
 			<if test="gameProcess != null">
 				#{gameProcess,jdbcType=VARCHAR},
 			</if>
+			<if test="defaultPrice != null">
+				#{defaultPrice},
+			</if>
+			<if test="billingTime != null">
+				#{billingTime},
+			</if>
 			<if test="state != null">
 				#{state,jdbcType=VARCHAR},
 			</if>
@@ -119,6 +133,12 @@
 			<if test="gameProcess != null">
 				game_process = #{gameProcess,jdbcType=VARCHAR},
 			</if>
+			<if test="defaultPrice != null">
+				default_price = #{defaultPrice},
+			</if>
+			<if test="billingTime != null">
+				billing_time = #{billingTime},
+			</if>
 			<if test="state != null">
 				state = #{state,jdbcType=VARCHAR},
 			</if>
@@ -130,28 +150,27 @@
 	</update>
 	<update id="updateByPrimaryKey" parameterType="com.device.model.Game">
 		update game
-		set
-		game_code = #{gameCode,jdbcType=VARCHAR},
-		game_name =
-		#{gameName,jdbcType=VARCHAR},
-		game_version =
-		#{gameVersion,jdbcType=VARCHAR},
-		game_process =
-		#{gameProcess,jdbcType=VARCHAR},
+		set game_code = #{gameCode,jdbcType=VARCHAR},
+		game_name = #{gameName,jdbcType=VARCHAR},
+		game_version = #{gameVersion,jdbcType=VARCHAR},
+		game_process = #{gameProcess,jdbcType=VARCHAR},
+		default_price = #{defaultPrice},
+		billing_time = #{billingTime},
 		state = #{state,jdbcType=VARCHAR},
 		create_time = #{createTime,jdbcType=TIMESTAMP}
-		where id =
-		#{id,jdbcType=INTEGER}
+		where id = #{id,jdbcType=INTEGER}
 	</update>
 	
 	<insert id="batchInsertGame" parameterType="java.util.List">
 	    insert into game (
 		game_code, game_name,
-		game_version, game_process, state,
+		game_version, game_process, default_price,billing_time,state,
 		create_time)
 	    VALUES 
 	    <foreach collection="list" item="item" index="index" separator="," >
-	        (#{item.gameCode},#{item.gameName},#{item.gameVersion},#{item.gameProcess},#{item.state}
+	        (#{item.gameCode},#{item.gameName},#{item.gameVersion},#{item.gameProcess},
+	        #{item.defaultPrice},#{item.billingTime},
+	        #{item.state}
 	        ,now()
 	        )
 	    </foreach>

@@ -14,21 +14,29 @@ public class SyncDadaSchedule
 	@Autowired
 	private SyncDataService syncDataService;
 	
-	@Scheduled(cron = "0 0/1 * * * ?")
+	@Scheduled(cron = "0 0/3 * * * ?")
 	public void syncGameRunRecord()
 	{
-		logger.info("执行上传游戏数据任务====开始");
-		syncDataService.uploadGameRecord();
-		logger.info("执行上传游戏数据====结束");
+		try {
+			logger.info("执行上传游戏数据任务====开始");
+			syncDataService.uploadGameRecord();
+			logger.info("执行上传游戏数据====结束");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	
-//	@Scheduled(cron = "0 0/1 * * * ?")
+	@Scheduled(cron = "0 0/5 * * * ?")
 	public void syncSystemCache()
 	{
-		logger.info("同步系统缓存===开始");
-		syncDataService.syncGames();
-		syncDataService.syncDeviceInfo();
-		logger.info("同步系统缓存====结束");
+		try {
+			logger.info("同步系统缓存===开始");
+			syncDataService.syncGames();
+//		syncDataService.syncDeviceInfo();
+			logger.info("同步系统缓存====结束");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}	
 }
