@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import com.device.common.SystemCache;
 import com.device.common.util.ProcessUtils;
 import com.device.service.MonitorService;
+import com.device.service.SyncDataService;
 /**
  * 
  * @author sawyer
@@ -24,10 +25,14 @@ public class StartServer {
 	public static final LinkedBlockingDeque<Set<String>> monitoeProcess = new LinkedBlockingDeque<Set<String>>();
 	
 	public static void start() {
-		logger.info("server start...");
-		if (SystemCache.initCache()) {
-			scanProcess();
-			processConsumer();
+		try {
+			logger.info("server start...");
+			if (SystemCache.initCache()) {
+				scanProcess();
+				processConsumer();
+			}
+		} catch (Exception e) {
+			logger.error("系统启动失败{}"+e);
 		}
 	}
 
@@ -36,7 +41,7 @@ public class StartServer {
 	 * @author sawyer
 	 * @date 2016年8月9日
 	 */
-	public static void scanProcess() {
+	private static void scanProcess() {
 		logger.debug("开始扫描进程");
 		new Thread(new Runnable() {
 			@Override
@@ -59,7 +64,7 @@ public class StartServer {
 	 * 
 	 * @date 2016年8月10日
 	 */
-	public static void processConsumer(){
+	private static void processConsumer(){
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
@@ -73,5 +78,16 @@ public class StartServer {
 				}
 			}
 		}).start();
+	}
+	
+	/**
+	 * 同步设备和远端的数据
+	 * @author sawyer
+	 * @date 2016年8月18日
+	 */
+	private static void syncSysConfig(){
+		SyncDataService syncDataService = SpringContext.getBean(SyncDataService.class);
+		syncDataService.syncGames();
+//		syncDataService.syncDeviceInfo();
 	}
 }

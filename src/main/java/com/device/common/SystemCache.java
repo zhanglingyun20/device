@@ -29,7 +29,7 @@ public class SystemCache
 	
 	public static boolean  initCache(){
 		try {
-//			initGames();
+			initGames();
 			initDeviceInfo();
 			initSysConfig();
 		} catch (Exception e) {

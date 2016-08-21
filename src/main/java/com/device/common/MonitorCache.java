@@ -1,5 +1,6 @@
 package com.device.common;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,19 +20,23 @@ public class MonitorCache {
 	 * 游戏关闭
 	 */
 	public static final String OFF = "off";
+	
+	public static String STATE="state";
+	
+	public static String TIME="time";
 
 	/**
 	 * 缓存监控 游戏map
 	 */
-	private static Map<String, String> monitorMap = new HashMap<String, String>();
+	private static Map<String, RunState> monitorMap = new HashMap<String, RunState>();
 	
 	/**
 	 * 正在运行的游戏
 	 */
-	private static Map<String, String> openMap = new HashMap<String, String>();
+	private static Map<String, RunState> openMap = new HashMap<String, RunState>();
 	
 	
-	private static Map<String, String> offMap = new HashMap<String, String>();
+	private static Map<String, RunState> offMap = new HashMap<String, RunState>();
 
 	private MonitorCache() {
 		super();
@@ -43,7 +48,7 @@ public class MonitorCache {
 	 * @date 2016年8月9日
 	 * @return
 	 */
-	public static synchronized Map<String, String> getMonitorMap() {
+	public static synchronized Map<String, RunState> getMonitorMap() {
 		return monitorMap;
 	}
 	
@@ -53,7 +58,7 @@ public class MonitorCache {
 	 * @date 2016年8月9日
 	 * @return
 	 */
-	public static synchronized Map<String, String> getOpenMap() {
+	public static synchronized Map<String, RunState> getOpenMap() {
 		return openMap;
 	}
 
@@ -63,7 +68,7 @@ public class MonitorCache {
 	 * @date 2016年8月9日
 	 * @return
 	 */
-	public static synchronized Map<String, String> getOffMap() {
+	public static synchronized Map<String, RunState> getOffMap() {
 		return offMap;
 	}
 	

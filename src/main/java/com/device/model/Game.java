@@ -1,6 +1,8 @@
 package com.device.model;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Game {
     /**
@@ -21,7 +23,7 @@ public class Game {
     /**
      * 游戏版本
      */
-    private String gameVersion;
+	private String gameVersion;
 
     /**
      * 游戏进程
@@ -29,7 +31,7 @@ public class Game {
     private String gameProcess;
 
     /**
-     * 游戏状态
+     * 游戏状态 
      */
     private String state;
 
@@ -37,7 +39,26 @@ public class Game {
      * 创建时间
      */
     private Date createTime;
+    
+    private Double defaultPrice;
 
+    private Integer billingTime;
+    
+	public enum State {
+		ACTIVE("active"), FORBIDDEN("forbidden");
+
+		private final String value;
+
+		State(String value)
+		{
+			this.value = value;
+		}
+
+		public String getValue()
+		{
+			return value;
+		}
+	}
     public Integer getId() {
         return id;
     }
@@ -93,21 +114,63 @@ public class Game {
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
-    
-	public enum Sync {
-		YES("yes"), 
-		NO("no");
-		private final String value;
 
-		Sync(String value)
-		{
-			this.value = value;
+	public static List<String> getStates(){
+		List<String> typeList = new ArrayList<String>();
+		State states[] = Game.State.values();
+		for (State item : states) {
+			typeList.add(item.getValue());
 		}
-
-		public String getValue()
-		{
-			return value;
-		}
-
+		return typeList;
 	}
+	
+	
+	
+	public Double getDefaultPrice() {
+		return defaultPrice;
+	}
+
+	public void setDefaultPrice(Double defaultPrice) {
+		this.defaultPrice = defaultPrice;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Game [id=" + id + ", gameCode=" + gameCode + ", gameName="
+				+ gameName + ", gameVersion=" + gameVersion + ", gameProcess="
+				+ gameProcess + ", state=" + state + ", createTime="
+				+ createTime + ", defaultPrice=" + defaultPrice
+				+ ", billingTime=" + billingTime + "]";
+	}
+
+	public Game(Integer id, String gameCode, String gameName,
+			String gameVersion, String gameProcess, String state,
+			Date createTime, Double defaultPrice, Integer billingTime) {
+		super();
+		this.id = id;
+		this.gameCode = gameCode;
+		this.gameName = gameName;
+		this.gameVersion = gameVersion;
+		this.gameProcess = gameProcess;
+		this.state = state;
+		this.createTime = createTime;
+		this.defaultPrice = defaultPrice;
+		this.billingTime = billingTime;
+	}
+
+	public Game() {
+		super();
+	}
+
+	public Integer getBillingTime() {
+		return billingTime;
+	}
+
+	public void setBillingTime(Integer billingTime) {
+		this.billingTime = billingTime;
+	}
+    
+	
 }
