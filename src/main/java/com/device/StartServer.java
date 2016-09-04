@@ -27,7 +27,6 @@ public class StartServer {
 	public static void start() {
 		try {
 			logger.info("server start...");
-			syncSysConfig();
 			if (SystemCache.initCache()) {
 				scanProcess();
 				processConsumer();
