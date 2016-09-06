@@ -30,7 +30,7 @@
 		<include refid="Base_Column_List" />
 		from game
 		where game_process = #{processName}
-		order id desc limit 1
+		order by id desc limit 1
 	</select>
 	
 	<select id="getAllGames" resultMap="BaseResultMap">
